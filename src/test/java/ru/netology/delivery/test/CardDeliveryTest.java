@@ -73,7 +73,6 @@ class CardDeliveryTest {
         $("[data-test-id='phone'] input").setValue(DataGenerator.generateWrongPhone("en"));
         $("[data-test-id='agreement']").click();
         $(byText("Запланировать")).click();
-        $(byText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
         $("[data-test-id='phone'].input_invalid .input__sub")
                 .shouldHave(exactText("Неверный формат номера телефона"));
     }
